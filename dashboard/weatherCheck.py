@@ -58,7 +58,7 @@ title = 'Latest observations for Odiham'
 st.title(title, anchor=None)
 
 st.write('This page displays the weather data for the last 7 days in Odiham between ' + startTime + ' and ' + endTime + '.'
-         + ' The data is processed using code in  https://github.com/ukfh/weather ')
+         + ' The data is processed using code in  https://github.com/ukfh/metoffice_datahub')
 
 
 # the plots
