@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR=/home/uh/weather/new_weather/
+DIR=/home/uh/weather/metoffice_datahub/
 
 DATE=`date +%Y-%m-%d-%H-%M`
 DATEZ=`date +%Y-%m-%dT%H:%M:%SZ`

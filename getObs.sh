@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR=/home/uh/weather/new_weather/
+DIR=/home/uh/weather/metoffice_datahub/
 APIKEY=`cat $DIR/api_key`
 #STATIONS=`head -2 $DIR/geohash_only.csv`
 STATIONS=`cat $DIR/geohash_only.csv`
@@ -37,6 +37,12 @@ done
 
 cp $thisfile ./data/processed
 
+mysql -h pidata02 -u monitor < query_odiham.sql | grep -v hourkey  > latest_weather.csv
+
+git add latest_weather.csv
+DATE=`date +%Y-%m-%d-%H-%M`
+git commit -m "Data update on $DATE"
+git push origin main
 
 exit
 
