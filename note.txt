@@ -1,0 +1,3 @@
+After mysql restart login locally (pidata02) as root and run mysql.
+Excute
+SET GLOBAL local_infile=1;
