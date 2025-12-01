@@ -1,15 +1,14 @@
 use staging;
 
 drop table if exists obs_tmp;
-create table obs_tmp
+create table if not exists obs_tmp
 (
     observations json default null
 )
 ;
 
 
-drop table observations;
-
+drop table if exists observations;
 create table if not exists observations
 (
     report_date_str   varchar(40),
@@ -31,7 +30,7 @@ create table if not exists observations
 ;
 
 drop table if exists staging.weather_processed_t;
-CREATE TABLE staging.weather_processed_t
+CREATE TABLE if not exists staging.weather_processed_t
 (
     i         varchar(10),
     name      varchar(100),
@@ -48,4 +47,4 @@ CREATE TABLE staging.weather_processed_t
     month     varchar(10),
     day       varchar(10),
     dt        varchar(10)
-);  
+);
