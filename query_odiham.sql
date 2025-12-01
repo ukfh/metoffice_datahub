@@ -7,7 +7,7 @@ SELECT dt,
 FROM staging.observations_long
 where 1 = 1
   and name = 'gcp76x'
-  and metric in   ('v','t','h','p','w')
-  and dt >= cast(SYSDATE() as date) - 8
+  and metric in ('v', 't', 'h', 'p', 'w')
+  and dt >= cast(SYSDATE() as date) - interval 8 day
 order by date_time desc
 ;

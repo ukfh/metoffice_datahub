@@ -1,4 +1,3 @@
-
 use staging;
 
 drop table if exists obs_tmp;
@@ -49,4 +48,4 @@ CREATE TABLE staging.weather_processed_t
     month     varchar(10),
     day       varchar(10),
     dt        varchar(10)
-);
+);  
