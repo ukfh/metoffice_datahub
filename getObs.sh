@@ -35,7 +35,7 @@ done
 
 ./ingestOneObsFile.sh $thisfile
 
-cp $thisfile ./data/processed
+mv $thisfile ./data/processed
 
 mysql -h pidata02 -u monitor < query_odiham.sql | grep -v hourkey  > latest_weather.csv
 
