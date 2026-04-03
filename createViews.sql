@@ -37,7 +37,7 @@ with observations as (select json_extract(o.observations, '$.report_date')     r
                                 trim(BOTH '"' from pressure_tendency) pressure_tendency
                          from observations)
 select report_date                               report_date_str,
-       str_to_date(report_date, '%Y-%m-%dT%TZ')  reoport_date,
+       str_to_date(report_date, '%Y-%m-%dT%TZ')  report_date,
        station_geohash,
        mslp,
        datetime                                  obs_datetime_str,
