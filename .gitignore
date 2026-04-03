@@ -7,3 +7,6 @@ data
 R.Rproj
 .idea
 *~
+files_org
+ingestObsTmp.sql
+old_data
