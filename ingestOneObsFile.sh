@@ -27,9 +27,10 @@ echo "truncate table obs_tmp;" >> $TMPSQL
 echo "load data local infile '"$file"' into table obs_tmp;" >> $TMPSQL
 #echo "delete from staging.observations where report_key in (select distinct report_key from staging.extract_observations)   ;" >> $TMPSQL
 #echo "delete from staging.observations where  obs_key in (select distinct obs_key from staging.extract_observations);" >> $TMPSQL
-#echo "insert into staging.observations select * from staging.extract_observations;" >> $TMPSQL
+echo "insert into staging.observations select * from staging.extract_observations;" >> $TMPSQL
 
 mysql -h pidata02 -u monitor --local-infile < $TMPSQL
+mysql -h pidata02 -u monitor --local-infile < updateObservationsTable.sql
 
 
 exit
