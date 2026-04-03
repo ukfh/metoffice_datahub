@@ -1,11 +1,6 @@
 MAILTO="uliharder@gmail.com"
 MAILFROM="uliharder@gmail.com"
 
-# old weather data
-15 1,5,9,13,17,21 * * * /home/uh/weather/weather/pipeline.sh
-#30 0,12 * * * ~/bin/get-all-forecast.sh
-#0  0,12 * * * ~/bin/get-all-observation.sh
-
 # new weather data
 5  0,8,16 * * * /home/uh/weather/metoffice_datahub/getObs.sh
 

@@ -31,6 +31,9 @@ do
     ./getStation.py $station $DATEZ  $APIKEY | grep -v "Not Found" >> $file
 done
 
+# temporary exit whilst we try to figure out why updates are so slow
+exit
+
 # ingest file to mysql
 
 ./ingestOneObsFile.sh $thisfile
