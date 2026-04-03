@@ -57,7 +57,7 @@ st.title(title, anchor=None)
 
 st.write('This page displays the weather data for the last 7 days in Odiham between ' + startTime + ' and ' + endTime + '.'
          + ' The data is processed using code in  https://github.com/ukfh/metoffice_datahub .'
-         + 'The data comes from the Metoffice datahub: https://datahub.metoffice.gov.uk/docs/g/category/observations/overview')
+         + ' The data comes from the Metoffice datahub: https://datahub.metoffice.gov.uk/docs/g/category/observations/overview')
 
 
 # the plots
