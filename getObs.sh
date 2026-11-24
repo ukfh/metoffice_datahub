@@ -35,11 +35,11 @@ done
 
 # ingest file to mysql
 
-#./ingestOneObsFile.sh $thisfile
+./ingestOneObsFile.sh $thisfile
 
-#mv $thisfile ./data/processed
+mv $thisfile ./data/processed
 
-#mysql -h pidata02 -u monitor < query_odiham.sql | grep -v hourkey  > latest_weather.csv
+mysql -h pidata02 -u monitor < query_odiham.sql | grep -v hourkey  > latest_weather.csv
 
 git add latest_weather.csv
 DATE=`date +%Y-%m-%d-%H-%M`
