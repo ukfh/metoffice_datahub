@@ -1,21 +1,23 @@
-DROP TABLE IF EXISTS weather_processed_t;
+USE STAGING;
 
-CREATE TABLE weather_processed_t
+DROP TABLE IF EXISTS WEATHER_PROCESSED_T;
+
+CREATE TABLE WEATHER_PROCESSED_T
 (
-    i          VARCHAR(16),
-    name       VARCHAR(255),
-    lat        DECIMAL(9, 6),
-    lon        DECIMAL(9, 6),
-    country    VARCHAR(100),
-    continent  VARCHAR(100),
-    elevation  DECIMAL(9, 2),
-    daykey     DATE,
-    hourkey    DECIMAL(4, 1),
-    metric     VARCHAR(16),
-    `value`    VARCHAR(255),
-    `year`     SMALLINT,
-    `month`    VARCHAR(2),
-    `day`      VARCHAR(2),
-    dt         DATE
+    I          VARCHAR(16),
+    NAME       VARCHAR(255),
+    LAT        DECIMAL(9, 6),
+    LON        DECIMAL(9, 6),
+    COUNTRY    VARCHAR(100),
+    CONTINENT  VARCHAR(100),
+    ELEVATION  DECIMAL(9, 2),
+    DAYKEY     DATE,
+    HOURKEY    DECIMAL(4, 1),
+    METRIC     VARCHAR(16),
+    VALUE    VARCHAR(255),
+    year     SMALLINT,
+    MONTH    VARCHAR(2),
+    DAY      VARCHAR(2),
+    DT         DATE
 ) ENGINE=InnoDB
-  DEFAULT CHARACTER SET=utf8mb4;
+  DEFAULT CHARACTER SET=UTF8MB4;
