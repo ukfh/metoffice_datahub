@@ -2,7 +2,7 @@
 set -euo pipefail
 
 script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-data_file="$script_dir/sample_old_data.tsv"
+data_file="$script_dir/allWeather_20251122.tsv"
 
 if [[ ! -f "$data_file" ]]; then
     printf 'Data file not found: %s\n' "$data_file" >&2
