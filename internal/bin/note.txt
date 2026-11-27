@@ -1,0 +1,11 @@
+
+cd /home/uh/weather/mysql/bin
+
+cp /mnt/fritz_nas/energy/newHumTem/smartmeter/combined-consumption-2024-05-01-2024-05-31.csv ../data/smartmeter/in
+
+cp /mnt/fritz_nas/energy/newHumTem/newDataInternal/VDL120-kg100\ fa-2024-05-20-06-24.txt ../data/internal/in
+
+./ingest_internal_data.sh ; ./ingest_smartmeter_data.sh
+
+mysql -h pidata02 -u monitor --local-infile=1
+ set global local_infile=true;
