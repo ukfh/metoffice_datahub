@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert Met Office hourly humidity and temperature workbooks to logger text."""
+"""Convert hourly humidity and temperature workbooks to logger text."""
 
 import argparse
 import re
