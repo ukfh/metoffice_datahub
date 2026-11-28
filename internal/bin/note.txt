@@ -9,3 +9,5 @@ cp /mnt/fritz_nas/energy/newHumTem/newDataInternal/VDL120-kg100\ fa-2024-05-20-0
 
 mysql -h pidata02 -u monitor --local-infile=1
  set global local_infile=true;
+
+python internal/bin/convertExcelFile.py --hum humidity.xlsx --temp temperature.xlsx --outdir output_folder --start-date 2026-10-24
