@@ -11,8 +11,8 @@ TABLE="internal_temperature_tmp"
 echo "Going to $DATAIN"
 cd $DATAIN
 
-echo "Enable mysql file upload (again)."
-mysql -h pidata02 -u monitor --local-infile=1 -e "set global local_infile=true"
+#echo "Enable mysql file upload (again)."
+#mysql -h pidata02 -u monitor --local-infile=1 -e "set global local_infile=true"
 
 
 for file in *.txt
